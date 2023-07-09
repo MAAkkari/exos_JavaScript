@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="board"></div>
+
+    <script>
+        const box = document.createElement("div")
+        box.classList.add("box")
+
+        const board= document.querySelector ("#board")
+        
+        for (let i = 1 ; i <= 4 ; i++){
+            const newbox = box.cloneNode()
+            newbox.innerText = i
+            board.appendChild(newbox)
+        
+
+        newbox.addEventListener("click",function(){
+            if (newbox.classList.contains("clicked")){
+                newbox.classList.remove("clicked");
+            }
+            else  {
+                newbox.classList.add("clicked");
+            }
+    })}
+</script>
+</body>
+</html>

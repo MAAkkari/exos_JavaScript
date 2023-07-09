@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="grid"></div>
+<h2 id="message"></h2>
+<script>
+const grid=document.querySelector("div")
+const box=document.createElement("div")
+const msg=document.querySelector("h2")
+let nb = 0;
+
+box.classList.add("box")
+for(let i=0;i<=9;i++){
+    const newbox=box.cloneNode();
+    grid.appendChild(newbox);
+    newbox.addEventListener("click",click)
+    function click(){
+        if (i % 2 === 0) {
+            newbox.innerText="X";
+            msg.innerText="Tour de O";
+            }
+        else{ 
+            newbox.innerText="O";
+            msg.innerText="Tour de X";       
+            }
+        newbox.removeEventListener("click", click);
+       
+        nb+=1;
+        console.log(nb);
+        if(nb===9){
+            msg.innerText="Partie Terminée"; 
+        }
+    }
+   
+    
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="carre">Click here for Css</div>
+
+    <script>
+        const carre = document.querySelector("div");
+        const styles = window.getComputedStyle(carre);
+
+        carre.addEventListener("click", function() {
+            const Nomclass=carre.getPropertyValue("Class");
+            const BackgroundColor=styles.getPropertyValue("background-color");
+            const height=styles.getPropertyValue("height");
+            const width=styles.getPropertyValue("width");
+            const font=styles.getPropertyValue("font");
+            const font_weight=styles.getPropertyValue("font-weight");
+            const display=styles.getPropertyValue("display");
+            alert("Class : "+ Nomclass +"\nBackground Color : "+BackgroundColor+"\nheight and width : "+height+", "+width+
+            "\nfont : "+font+"\nfont weight : "+font_weight+"\ndisplay : "+display)
+            }
+        );
+   
+</script>
+</body>
+</html>

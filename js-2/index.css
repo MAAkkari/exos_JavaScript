@@ -1,0 +1,23 @@
+#board{
+    width:400px;
+    display:grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    margin:15% auto;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(144, 231, 13);
+    border:1px solid black;
+    text-align: center;
+    line-height: 200px;
+    font-size: 200%;
+    cursor:pointer;
+    transition:  0.3s ;
+}
+.clicked{
+    background-color: rgb(208, 28, 28);
+    transform: rotate(-45deg);
+    transition: 0.3s ;
+}

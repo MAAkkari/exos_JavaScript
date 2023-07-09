@@ -1,0 +1,26 @@
+body{
+    background-image: url("images.jpg");
+    background-size: cover;
+}
+#panneau{
+    width :700px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.138);
+    margin: 10% auto;
+    text-align: center;
+}
+h2{
+    color : white ;
+    font-size : 250%;
+    font-weight:normal;
+    padding-top:37%
+}
+h3{
+    color : rgb(246, 236, 236) ;
+}
+input{
+    width: 300px;
+    height: 50px;
+    font-size : 150%;
+    color : rgb(5, 3, 3) ;
+}
