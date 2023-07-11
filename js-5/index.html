@@ -18,9 +18,12 @@
         panneau.appendChild(champ)
         panneau.appendChild(franc)
         champ.addEventListener("input", function(){
-            if (!isNaN(champ.value)) {
-           const euro= parseFloat(champ.value)
-           franc.innerText= (euro*6.55957).toFixed(2)+" Francs"
+            if (champ.value===""){
+                    franc.innerText=""
+                }
+            else if(!isNaN(champ.value)) {
+                const euro= parseFloat(champ.value)
+                franc.innerText= (euro*6.55957).toFixed(2)+" Francs"
             }
             else{
                 franc.innerText= "Erreur : il faut saisir une valeur numerique"

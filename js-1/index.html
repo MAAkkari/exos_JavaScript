@@ -14,7 +14,7 @@
         const styles = window.getComputedStyle(carre);
 
         carre.addEventListener("click", function() {
-            const Nomclass=carre.getPropertyValue("Class");
+            const Nomclass=carre.getAttribute("class");
             const BackgroundColor=styles.getPropertyValue("background-color");
             const height=styles.getPropertyValue("height");
             const width=styles.getPropertyValue("width");
@@ -22,7 +22,7 @@
             const font_weight=styles.getPropertyValue("font-weight");
             const display=styles.getPropertyValue("display");
             alert("Class : "+ Nomclass +"\nBackground Color : "+BackgroundColor+"\nheight and width : "+height+", "+width+
-            "\nfont : "+font+"\nfont weight : "+font_weight+"\ndisplay : "+display)
+            "\nfont : "+font+"\nfont weight : "+font_weight+"\ndisplay : "+display);
             }
         );
    
